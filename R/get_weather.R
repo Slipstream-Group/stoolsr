@@ -196,7 +196,7 @@ get_isdlite <- function(yr_start,
 #'
 #' @param lat numeric latitude for site
 #' @param lon numeric longitude for site
-#' @param api_key NREL API key (see:  https://nsrdb.nrel.gov/about/tmy.html)
+#' @param api_key NREL API key (see: https://developer.nrel.gov/)
 #'
 #' @return list containing 1) TMY data as data frame and 2) metadata as named list
 #' @export
@@ -212,12 +212,10 @@ get_isdlite <- function(yr_start,
 get_tmy <- function(lat, lon, api_key = NULL){
   
   if(is.null(api_key)){
-    stop("This function requires a valid api key from https://nsrdb.nrel.gov/about/tmy.html")
+    stop("This function requires a valid api key from https://developer.nrel.gov/")
   }
-  # https://nsrdb.nrel.gov/about/tmy.html
 
   # You must request an NSRDB api key from the link above
-  #api_key = 'hn7pzescl5xtiibLsBQEP7KYpSJKebG7YZUOIGL5'
   # Set the attributes to extract (e.g., dhi, ghi, etc.), separated by commas.
   # OPTIONS: dew_point, dhi, dni, ghi, surface_albedo, surface_pressure, air_temperature, wind_direction, wind_speed"
   vars = 'air_temperature,dew_point,wind_speed'
