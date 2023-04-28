@@ -127,3 +127,32 @@ is_validemail <- function(x) {
   grepl("\\<[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\>",
         as.character(x), ignore.case=TRUE)
 }
+
+
+#' Make File List
+#' @description
+#' Helper function for 
+#' 
+#' @param dir valid directory as string
+#' @param pattern regex pattern string to return only file names with string match
+#'
+#' @return Named list where name is the file name and value is the full file path
+#' @export
+#'
+#' @examples
+#' # Ex. List files in current working dir
+#' make_file_list(".")
+#' 
+#' # Ex. 2:  Return a list of some dummy .csv files with data
+#' dfs <- lapply(rep(50, 20), function(x) data.frame(x= sample(LETTERS, x, replace = TRUE), y = rnorm(x)))
+#' dp <- tempdir()
+#' fps <- file.path(dp, paste0("file", 1:20, ".csv"))
+#' for(i in 1:20) write.csv(dfs[[i]], fps[[i]])
+#' make_file_list(dp, pattern = ".csv")
+#' 
+make_file_list <- function(dir, pattern = NULL) {
+  flist <- as.list(list.files(dir, pattern = pattern, full.names = TRUE))
+  names(flist) <- list.files(dir, pattern = pattern)
+  return(flist)
+}
+
