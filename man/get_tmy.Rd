@@ -11,7 +11,7 @@ get_tmy(lat, lon, api_key = NULL)
 
 \item{lon}{numeric longitude for site}
 
-\item{api_key}{NREL API key (see:  https://nsrdb.nrel.gov/about/tmy.html)}
+\item{api_key}{NREL API key (see: https://developer.nrel.gov/)}
 }
 \value{
 list containing 1) TMY data as data frame and 2) metadata as named list
