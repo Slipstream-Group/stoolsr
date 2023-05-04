@@ -1,10 +1,13 @@
 
 slipstream_colors <- list(
-  purple = "#9E1F61",
-  lightgreen = "#CCDB2A",
-  darkgreen = "#1B998B",
+  plum = "#9E1F61",
+  lavender = "#EBD3DF",
+  lime = "#CCDB2A",
+  dark_teal = "#1B998B",
+  aqua = "#D1EBE8",
   orange = "#F58555",
-  darkblue = "#021D49"
+  light_orange = "#FCE0D4",
+  dark_blue = "#021D49"
 )
 
 
