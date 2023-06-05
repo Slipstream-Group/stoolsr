@@ -68,7 +68,7 @@ exelon_colors <- list(
   periwinkle = "#E8E7F0",
   blue = "#3A5CFF",
   green = "#00E4A5",
-  organge = "#FF8300",
+  orange = "#FF8300",
   gold = "#FFD700"
 )
 
