@@ -61,3 +61,15 @@ guidehouse_colors <- list(
 )
 
 save(guidehouse_colors, file = "data/guidehouse_colors.RData")
+
+exelon_colors <- list(
+  darkblue = "#170D67",
+  darkpurple = "#6E06C1",
+  periwinkle = "#E8E7F0",
+  blue = "#3A5CFF",
+  green = "#00E4A5",
+  organge = "#FF8300",
+  gold = "#FFD700"
+)
+
+save(exelon_colors, file = "data/exelon_colors.RData")
